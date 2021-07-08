@@ -16,4 +16,31 @@ resources:
   kind: Add
   path: github.com/ratnadeep/operator-tutorial/api/v1alpha1
   version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: calc.k8s
+  group: basic
+  kind: Subs
+  path: github.com/ratnadeep/operator-tutorial/api/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: calc.k8s
+  group: basic
+  kind: Mul
+  path: github.com/ratnadeep/operator-tutorial/api/v1alpha1
+  version: v1alpha1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: calc.k8s
+  group: basic
+  kind: Div
+  path: github.com/ratnadeep/operator-tutorial/api/v1alpha1
+  version: v1alpha1
 version: "3"

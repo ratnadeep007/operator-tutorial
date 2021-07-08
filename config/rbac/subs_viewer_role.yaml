@@ -1,0 +1,20 @@
+# permissions for end users to view subs.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: subs-viewer-role
+rules:
+- apiGroups:
+  - basic.calc.k8s
+  resources:
+  - subs
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - basic.calc.k8s
+  resources:
+  - subs/status
+  verbs:
+  - get

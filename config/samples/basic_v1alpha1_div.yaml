@@ -1,0 +1,7 @@
+apiVersion: basic.calc.k8s/v1alpha1
+kind: Div
+metadata:
+  name: div-sample
+spec:
+  # Add fields here
+  foo: bar

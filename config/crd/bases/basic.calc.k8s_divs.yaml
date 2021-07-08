@@ -1,0 +1,75 @@
+
+---
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  annotations:
+    controller-gen.kubebuilder.io/version: v0.4.1
+  creationTimestamp: null
+  name: divs.basic.calc.k8s
+spec:
+  group: basic.calc.k8s
+  names:
+    kind: Div
+    listKind: DivList
+    plural: divs
+    singular: div
+  scope: Namespaced
+  versions:
+  - additionalPrinterColumns:
+    - jsonPath: .spec.num1
+      name: Number 1
+      type: integer
+    - jsonPath: .spec.num2
+      name: Number 2
+      type: integer
+    - jsonPath: .status.result
+      name: Result
+      type: integer
+    name: v1alpha1
+    schema:
+      openAPIV3Schema:
+        description: Div is the Schema for the divs API
+        properties:
+          apiVersion:
+            description: 'APIVersion defines the versioned schema of this representation
+              of an object. Servers should convert recognized schemas to the latest
+              internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
+            type: string
+          kind:
+            description: 'Kind is a string value representing the REST resource this
+              object represents. Servers may infer this from the endpoint the client
+              submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
+            type: string
+          metadata:
+            type: object
+          spec:
+            description: DivSpec defines the desired state of Div
+            properties:
+              num1:
+                type: integer
+              num2:
+                type: integer
+            required:
+            - num1
+            - num2
+            type: object
+          status:
+            description: DivStatus defines the observed state of Div
+            properties:
+              result:
+                type: integer
+            required:
+            - result
+            type: object
+        type: object
+    served: true
+    storage: true
+    subresources:
+      status: {}
+status:
+  acceptedNames:
+    kind: ""
+    plural: ""
+  conditions: []
+  storedVersions: []

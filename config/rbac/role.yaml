@@ -32,3 +32,81 @@ rules:
   - get
   - patch
   - update
+- apiGroups:
+  - basic.calc.k8s
+  resources:
+  - divs
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - basic.calc.k8s
+  resources:
+  - divs/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - basic.calc.k8s
+  resources:
+  - divs/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - basic.calc.k8s
+  resources:
+  - muls
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - basic.calc.k8s
+  resources:
+  - muls/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - basic.calc.k8s
+  resources:
+  - muls/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - basic.calc.k8s
+  resources:
+  - subs
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - basic.calc.k8s
+  resources:
+  - subs/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - basic.calc.k8s
+  resources:
+  - subs/status
+  verbs:
+  - get
+  - patch
+  - update

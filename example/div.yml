@@ -1,0 +1,7 @@
+apiVersion: basic.calc.k8s/v1alpha1
+kind: Div
+metadata:
+  name: basic-div
+spec:
+  num1: 1
+  num2: 2

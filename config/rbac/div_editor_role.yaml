@@ -1,0 +1,24 @@
+# permissions for end users to edit divs.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: div-editor-role
+rules:
+- apiGroups:
+  - basic.calc.k8s
+  resources:
+  - divs
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - basic.calc.k8s
+  resources:
+  - divs/status
+  verbs:
+  - get
