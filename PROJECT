@@ -1,0 +1,19 @@
+domain: calc.k8s
+layout:
+- go.kubebuilder.io/v3
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: operator-tutorial
+repo: github.com/ratnadeep/operator-tutorial
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: calc.k8s
+  group: basic
+  kind: Add
+  path: github.com/ratnadeep/operator-tutorial/api/v1alpha1
+  version: v1alpha1
+version: "3"
